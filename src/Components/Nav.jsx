@@ -23,8 +23,9 @@ function Nav() {
                 <NavLink className="hidden p-3 text-xl italic text-slate-50 sm:flex active:text-slate-800" to="/Delete">Deleted Task<strong className="text-xl text-red-950 non-italic">({Delete.length})</strong></NavLink>
                
             </nav>
+           
             <div >
-                <img className="fixed w-8 h-7 top-2 right-2 sm:hidden" src="../download2.png" onClick={() => setisopen(!isopen)}></img>
+                <img className="fixed inline w-8 h-7 top-2 right-2 sm:hidden" src="../download2.png" onClick={() => setisopen(!isopen)}></img>
             </div>
 
             {isopen && (
