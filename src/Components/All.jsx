@@ -12,8 +12,13 @@ function All() {
     const { Delete, setDelete } = useContext(MyContext3)
     const { Tasks, setTasks } = useContext(MyContext2)
     const { isopen } = useContext(MyContext)
+    const [date , setdate] = useState(new Date().toLocaleDateString())
+ 
+    
 
     const filtereddata = inputdata ? Tasks.filter((T) => T.title.toLowerCase().includes(inputdata.toLowerCase())) : Tasks
+
+    
 
     const HandleDelete = (index) => {
         const tasktodelete = Tasks[index]
@@ -33,6 +38,8 @@ function All() {
         }
 
     }
+
+    
 
 
     return (
@@ -58,6 +65,7 @@ function All() {
                                         <img className="w-8 h-8 m-2 rounded " src="../Dustbin2.png" alt="Dustbin logo Image" onClick={() => HandleDelete(index)} ></img>
                                         <img className="w-8 h-8 m-2 rounded " src="../Completed.png" alt="Dustbin logo Image" onClick={() => HandleComplete(index)} ></img>
                                     </span>
+                                   <span className="text-slate-50">{date}</span>
 
                                 </div>
                             ))}
