@@ -62,7 +62,7 @@ function All() {
                                     <h1 className="text-xl font-bold text-slate-50 lg:text-lg"><strong className="font-light">Title:</strong>{T.title}</h1>
                                     <p className="text-xl font-bold text-slate-50 lg:text-sm"><strong className="font-light">Description:</strong>{T.description}</p>
                                     <span className="flex">
-                                        <img className="w-8 h-8 m-2 rounded " src="../Dustbin2.png" alt="Dustbin logo Image" onClick={() => HandleDelete(index)} ></img>
+                                        <img className="w-8 h-8 m-2 rounded " src="../Dustbin.png" alt="Dustbin logo Image" onClick={() => HandleDelete(index)} ></img>
                                         <img className="w-8 h-8 m-2 rounded " src="../Completed.png" alt="Dustbin logo Image" onClick={() => HandleComplete(index)} ></img>
                                     </span>
                                    <span className="text-slate-50">{date}</span>

@@ -25,7 +25,7 @@ function Nav() {
             </nav>
            
             <div >
-                <img className="fixed inline w-8 h-7 top-2 right-2 sm:hidden" src="../download2.png" onClick={() => setisopen(!isopen)}></img>
+                <img className="fixed inline h-12 w-15 top-1 right-2 sm:hidden" src="../Hamberger.png" onClick={() => setisopen(!isopen)}></img>
             </div>
 
             {isopen && (
@@ -41,7 +41,7 @@ function Nav() {
 
             {isopen && (
                 <div className="fixed top-2 right-2 sm:hidden">
-                    <img className="h-8 w-9" src="../download3.png " onClick={()=>setisopen(false)} />
+                    <img className="w-12 h-13" src="../Cross.png " onClick={()=>setisopen(false)} />
                 </div>
             )}
 
