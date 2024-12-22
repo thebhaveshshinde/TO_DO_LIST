@@ -47,7 +47,7 @@ function Create_task() {
             </form><br/>
             
            
-            <img onClick={()=>setformisopen(!formisopen)} className="w-10 h-12 " src="download3.png" />
+            <img onClick={()=>setformisopen(!formisopen)} className="w-10 h-12 " src="Cross.png" />
            
           </div>
           
