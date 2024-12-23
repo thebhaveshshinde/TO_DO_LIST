@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { MyContext2 } from "./MyContext2"
 import { Link } from "react-router-dom"
 import { MyContext3 } from "./MyContext3"
@@ -13,12 +13,21 @@ function All() {
     const { Tasks, setTasks } = useContext(MyContext2)
     const { isopen } = useContext(MyContext)
     const [date , setdate] = useState(new Date().toLocaleDateString())
- 
     
+    useEffect(()=>{
+        localStorage.setItem('stored',JSON.stringify(Tasks))
+    })
+
+
+    useEffect(()=>{
+        localStorage.setItem('deleted',JSON.stringify(Delete))
+    })
+
+    useEffect(()=>{
+        localStorage.setItem('completes',JSON.stringify(Completed))
+    })
 
     const filtereddata = inputdata ? Tasks.filter((T) => T.title.toLowerCase().includes(inputdata.toLowerCase())) : Tasks
-
-    
 
     const HandleDelete = (index) => {
         const tasktodelete = Tasks[index]
@@ -55,9 +64,9 @@ function All() {
                 <div >
 
 
-                    {Tasks.length > 0 ? (
+                    {filtereddata.length > 0 ? (
                         <div className="w-screen min-h-screen bg-slate-800 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                            {filtereddata.map((T, index) => (
+                            {Tasks.map((T, index) => (
                                 <div className="flex flex-col items-center justify-center p-3 m-4 text-center border-2 border-purple-800 rounded w-4/4 sm:w-3/4 md:w-50vw lg:w-40vw bg-slate-700 h-3/4 " key={index}>
                                     <h1 className="text-xl font-bold text-slate-50 lg:text-lg"><strong className="font-light">Title:</strong>{T.title}</h1>
                                     <p className="text-xl font-bold text-slate-50 lg:text-sm"><strong className="font-light">Description:</strong>{T.description}</p>

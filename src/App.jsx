@@ -14,9 +14,18 @@ import { MyContext4 } from "./Components/MyContext4.jsx"
 function App() {
 
   const [isopen , setisopen] = useState(false)
-  const [Tasks , setTasks] = useState([])
-  const [Delete , setDelete] = useState([])
-  const [Completed , setCompleted] = useState([])
+  const [Tasks , setTasks] = useState(()=>{
+    const Stored = localStorage.getItem('stored')
+    return Stored ? JSON.parse(Stored) : ""
+  })
+  const [Delete , setDelete] = useState(()=>{
+    const Deletes = localStorage.getItem('deleted')
+    return Deletes ? JSON.parse(Deletes) : ""
+  })
+  const [Completed , setCompleted] = useState(()=>{
+    const Completes = localStorage.getItem('completes')
+    return Completes ? JSON.parse(Completes) : []
+  })
 
   return (
     <>
