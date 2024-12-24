@@ -1,13 +1,23 @@
 import { useContext } from "react"
 import { MyContext4 } from "./MyContext4"
+import { MyContext } from "./MyContext"
 import { Link } from "react-router-dom"
 
 function Completed_Tasks() {
+  const {isopen} = useContext(MyContext)
   const {Completed , setCompleted} = useContext(MyContext4)
+
+  const HandleCompleteClick = ()=>{
+    localStorage.removeItem('completes')
+    setCompleted([])
+  }
+
   return (
     <>
       <div className="min-h-screen bg-slate-800">
-        <div className="top-0 left-0 right-0 h-20"></div>
+        <div className="top-0 left-0 right-0 h-20">
+        <img src="../Trash.png" onClick={HandleCompleteClick} className={`${isopen?'hidden' : 'flex'} fixed text-4xl text-purple-400 bolder bottom-3 right-3 `} />
+        </div>
         <div  className="flex flex-col w-screen min-h-screen text-center bg-slate-800 md:grid md:grid-cols- lg:grid-cols-4 ">
          {Completed.length>0 ? (
           <div className="w-screen min-h-screen bg-slate-800 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

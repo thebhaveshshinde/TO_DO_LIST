@@ -1,16 +1,27 @@
 import { useContext } from "react"
+import {MyContext} from "./MyContext"
 import { MyContext3 } from "./MyContext3"
 import { Link } from "react-router-dom"
 
 
 
 function Deleted_task() {
-  const { Delete } = useContext(MyContext3)
+  const { isopen } = useContext(MyContext)
+  const { Delete , setDelete } = useContext(MyContext3)
+
+  const HandleDeleteClick = ()=>{
+    localStorage.removeItem('deleted')
+    setDelete([])
+    
+  }
+  
 
   return (
     <>
       <div className="min-h-screen bg-slate-800">
-      <div className="top-0 left-0 right-0 z-10 w-screen h-20 bg-slate-800 "></div>
+      <div className="top-0 left-0 right-0 z-10 w-screen h-20 bg-slate-800 ">
+        <img src="../Trash.png" onClick={HandleDeleteClick} className={`${isopen?'hidden' : 'flex'} fixed text-4xl text-purple-400 bolder bottom-3 right-3 `} />
+      </div>
       <div className="flex flex-col w-screen min-h-screen text-center bg-slate-800 md:grid md:grid-cols- lg:grid-cols-4 ">
         {Delete.length > 0 ? (
           <div className="w-screen min-h-screen bg-slate-800 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
