@@ -9,6 +9,7 @@ import { useState } from "react"
 import { MyContext2 } from "./Components/MyContext2.jsx"
 import { MyContext3 } from "./Components/MyContext3.jsx"
 import { MyContext4 } from "./Components/MyContext4.jsx"
+import { MyContext5 } from "./Components/MyContext5.jsx"
 
 
 function App() {
@@ -27,6 +28,11 @@ function App() {
     return Completes ? JSON.parse(Completes) : []
   })
 
+  const [light , setlight] =  useState(()=>{
+    const mode = localStorage.getItem('Mode')
+    return mode ? JSON.parse(mode) : false
+  })
+
   return (
     <>
       <Router>
@@ -34,6 +40,8 @@ function App() {
       <MyContext2.Provider value={{Tasks , setTasks}}>
       <MyContext3.Provider value={{Delete , setDelete}}>
       <MyContext4.Provider value={{Completed , setCompleted}}>
+      <MyContext5.Provider value={{light,setlight}}>
+      
       
         <Nav />
         <div>
@@ -48,6 +56,7 @@ function App() {
           </Routes>
           
         </div>
+        </MyContext5.Provider>
         </MyContext4.Provider>
         </MyContext3.Provider>
         </MyContext2.Provider>
