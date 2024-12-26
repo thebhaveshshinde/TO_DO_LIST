@@ -20,9 +20,9 @@ function Nav() {
 
             <nav className={`${light?'sm:bg-cyan-400':'sm:bg-slate-600'} hidden w-screen sm:flex sm:justify-center sm:items-center sm:text-center sm:mt-0  sm:h-20 sm:fixed sm:top-0 sm:p-2 sm:z-50`}>
                 <NavLink className={`${light?'text-purple-900':'text-slate-50'} hidden p-3 text-xl italic  sm:flex active:text-slate-800`} to="/">Create Task</NavLink>
-                <NavLink className={`${light?'text-purple-900':'text-slate-50'} hidden p-3 text-xl italic  sm:flex active:text-slate-800`}>All Task<strong className="text-xl text-red-950 non-italic">({Tasks.length})</strong></NavLink>
-                <NavLink className={`${light?'text-purple-900':'text-slate-50'} hidden p-3 text-xl italic  sm:flex active:text-slate-800`}>Completed Task<strong className="text-xl text-red-950 non-italic">({Completed.length})</strong></NavLink>
-                <NavLink className={`${light?'text-purple-900':'text-slate-50'} hidden p-3 text-xl italic  sm:flex active:text-slate-800`}>Deleted Task<strong className="text-xl text-red-950 non-italic">({Delete.length})</strong></NavLink>
+                <NavLink className={`${light?'text-purple-900':'text-slate-50'} hidden p-3 text-xl italic  sm:flex active:text-slate-800`} to="/All">All Task<strong className="text-xl text-red-950 non-italic">({Tasks.length})</strong></NavLink>
+                <NavLink className={`${light?'text-purple-900':'text-slate-50'} hidden p-3 text-xl italic  sm:flex active:text-slate-800`} to="/Complete">Completed Task<strong className="text-xl text-red-950 non-italic">({Completed.length})</strong></NavLink>
+                <NavLink className={`${light?'text-purple-900':'text-slate-50'} hidden p-3 text-xl italic  sm:flex active:text-slate-800`} to="/Delete">Deleted Task<strong className="text-xl text-red-950 non-italic">({Delete.length})</strong></NavLink>
                
             </nav>
 
