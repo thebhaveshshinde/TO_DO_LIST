@@ -64,6 +64,9 @@ function Create_task() {
           )}
 
         </div>
+      <footer className={`${isopen?'hidden':'flex'} ${formisopen?'hidden':'flex'} fixed bottom-0 flex items-center justify-center w-screen m-2 text-center`}>
+        <h1 className={`${light?'text-red-950':'text-slate-50'} text-lg  `}>&copy; Copyright Restricted 2024 . Developed with 💖 By Bhavesh Shinde .</h1>
+      </footer>
 
       </div>
 
