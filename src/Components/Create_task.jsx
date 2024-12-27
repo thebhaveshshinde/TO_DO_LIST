@@ -10,7 +10,7 @@ function Create_task() {
   const [Task, setTask] = useState({ title: '', description: '' })
   const { Tasks, setTasks } = useContext(MyContext2)
   const { isopen, setisopen } = useContext(MyContext)
-  const {light , setlight} = useContext(MyContext5)
+  const { light, setlight } = useContext(MyContext5)
 
   const HandleSubmit = (e) => {
     e.preventDefault();
@@ -24,20 +24,20 @@ function Create_task() {
     setTask({ ...Task, [e.target.name]: e.target.value })
   }
 
-  useEffect(()=>{
-    localStorage.setItem('Mode' , JSON.stringify(light))
+  useEffect(() => {
+    localStorage.setItem('Mode', JSON.stringify(light))
   })
 
   return (
     <>
-      <div className={`${light?'bg-cyan-200' : 'bg-slate-800'} w-screen h-screen sm:absolute  sm:top-20 top-10`} >
+      <div className={`${light ? 'bg-cyan-200' : 'bg-slate-800'} w-screen h-screen sm:absolute  sm:top-20 top-10`} >
 
         <div className={` ${isopen ? 'hidden' : 'flex'} fixed inline sm:top-30 `}>
-          <img src="../Mode.png" onClick={()=>setlight(!light)} />
+          <img src="../Mode.png" onClick={() => setlight(!light)} />
         </div>
 
         <div className="flex items-center justify-center w-screen h-screen text-center ">
-          <button className={` ${isopen ? 'hidden' : 'flex'} ${light?'bg-blue-500':'bg-red-400'} fixed z-30 p-3 text-4xl font-bold  border-4 ${light?'text-red-800':'text-slate-50'} rounded-xl ${light?'border-red-500':'border-red-950'} `}
+          <button className={` ${isopen ? 'hidden' : 'flex'} ${light ? 'bg-blue-500' : 'bg-red-400'} fixed z-30 p-3 text-4xl font-bold  border-4 ${light ? 'text-red-800' : 'text-slate-50'} rounded-xl ${light ? 'border-red-500' : 'border-red-950'} `}
             onClick={() => setformisopen(!formisopen)}>Add Task !</button>
 
 
@@ -64,9 +64,9 @@ function Create_task() {
           )}
 
         </div>
-      <footer className={`${isopen?'hidden':'flex'} ${formisopen?'hidden':'flex'} fixed bottom-0 flex items-center justify-center w-screen m-2 text-center`}>
-        <h1 className={`${light?'text-red-950':'text-slate-50'} text-lg  `}>&copy; Copyright Restricted 2024 . Developed with 💖 By Bhavesh Shinde .</h1>
-      </footer>
+        <footer className={`${isopen ? 'hidden' : 'flex'} ${formisopen ? 'hidden' : 'flex'} fixed bottom-0 flex items-center justify-center w-screen m-2 text-center`}>
+          <h1 className={`${light ? 'text-red-950' : 'text-slate-50'} text-lg  `}>&copy; Copyright Restricted 2024 . Developed with 💖 By Bhavesh Shinde .</h1>
+        </footer>
 
       </div>
 
