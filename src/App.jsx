@@ -10,6 +10,9 @@ import { MyContext2 } from "./Components/MyContext2.jsx"
 import { MyContext3 } from "./Components/MyContext3.jsx"
 import { MyContext4 } from "./Components/MyContext4.jsx"
 import { MyContext5 } from "./Components/MyContext5.jsx"
+import Log from "./Components/Log.jsx"
+import Already from "./Components/Already.jsx"
+
 
 
 function App() {
@@ -33,25 +36,31 @@ function App() {
     return mode ? JSON.parse(mode) : false
   })
 
+
   return (
     <>
+    
+
       <Router>
+      
       <MyContext.Provider value={{isopen , setisopen}}>
       <MyContext2.Provider value={{Tasks , setTasks}}>
       <MyContext3.Provider value={{Delete , setDelete}}>
       <MyContext4.Provider value={{Completed , setCompleted}}>
       <MyContext5.Provider value={{light,setlight}}>
-      
-      
-        <Nav />
+     
+        
+        {/* <Nav /> */}
         <div>
        
           <Routes>
          
-            <Route path="/" element={<Create_task />} />
-            <Route path="/All" element={<All />} />
-            <Route path="/Delete" element={<Deleted_task />} />
-            <Route path="/Complete" element={<Completed_Tasks />} />
+           <Route path="/" element={< Log />} />
+            <Route path="/Create" element={<><Nav/><Create_task /></>} />
+            <Route path="/All" element={<><Nav></Nav><All /></>} />
+            <Route path="/Delete" element={<><Nav/><Deleted_task /></>} />
+            <Route path="/Complete" element={<><Nav></Nav><Completed_Tasks /></>} />
+            <Route path="/Validate" element={<Already />} />
            
           </Routes>
           

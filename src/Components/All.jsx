@@ -85,7 +85,7 @@ function All() {
                     ) : (
                         <div className="flex flex-col items-center justify-center w-screen h-screen text-center ">
                             <p className={`${light?'text-red-950':'text-slate-50'} text-2xl italic font-bold`} >No Task Added Yet ... </p><br />
-                            <Link to="/" className="text-xl text-blue-600 ">Click to Add Task</Link>
+                            <Link to="/Create" className="text-xl text-blue-600 ">Click to Add Task</Link>
                         </div>
                     )}
 
