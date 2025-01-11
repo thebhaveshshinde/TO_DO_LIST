@@ -12,6 +12,7 @@ import { MyContext4 } from "./Components/MyContext4.jsx"
 import { MyContext5 } from "./Components/MyContext5.jsx"
 import Log from "./Components/Log.jsx"
 import Already from "./Components/Already.jsx"
+import Badgatway from "./Components/Badgatway.jsx"
 
 
 
@@ -61,6 +62,7 @@ function App() {
             <Route path="/Delete" element={<><Nav/><Deleted_task /></>} />
             <Route path="/Complete" element={<><Nav></Nav><Completed_Tasks /></>} />
             <Route path="/Validate" element={<Already />} />
+            <Route path="/unauthorized" element={<Badgatway/>} />
            
           </Routes>
           
