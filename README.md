@@ -12,6 +12,8 @@ Tech Used -
  Storage - Local Storage to store the Task Entered By the Users , even if the Page is refreshed or reloaded.
  
  Tailwind CSS - To make the Project UI Attractive By using Various Utility Classes .
+
+Responsive Design - Friendly on All screens like Mobile , Tab , Laptop and PC.
  
 
  Workflow  :-
