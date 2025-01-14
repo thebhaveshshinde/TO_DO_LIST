@@ -7,9 +7,12 @@ Tech Used -
  Storage - Local Storage to store the Task Entered By the Users , even if the Page is refreshed or reloaded.
  Tailwind CSS - To make the Project UI Attractive By using Various Utility Classes .
 
- Usage :-
+ Workflow  :-
  Register / Login - The User authenticate by Creating Account and Login to the same .
- Create Task -
+ Create Task - The User Creates Task By Entering the Title and description Of the Task .
+ Complete Task - Allows the User to Mark a Particuular Task as completed .
+ Delete Task - Allow the User to delete the Particular Task .
+ Dark / Light Mode - Allow the User to Change The Mode to the Website to Dark or Light as per their Preference .
 
 
 
