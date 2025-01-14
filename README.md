@@ -1,2 +1,15 @@
-To_Do_List-
-This is the to_do list Project made using React.js  and Tailwind CSS for Styling , allowing users to Enter and store their Daily Important Tasks.
+To_Do_List Task Manager -
+
+This is the to_do list Project that allows the users to Enter , Store and manage thier daily important Tasks Seamlesly.Mark the Tasks Completed or Delete the Tasks.
+
+Tech Used -
+ React js - To handle the the frontend of the Project and update it Dynamically .
+ Storage - Local Storage to store the Task Entered By the Users , even if the Page is refreshed or reloaded.
+ Tailwind CSS - To make the Project UI Attractive By using Various Utility Classes .
+
+ Usage :-
+ Register / Login - The User authenticate by Creating Account and Login to the same .
+ Create Task -
+
+
+
