@@ -68,7 +68,7 @@ function All() {
 
                     {filtereddata.length > 0 ? (
                         <div className={`${light?'bg-cyan-200':'bg-slate-800'} w-screen min-h-screen  md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`}>
-                            {Tasks.map((T, index) => (
+                            {filtereddata.map((T, index) => (
                                 <div className={`${light?'bg-slate-400':'bg-slate-700'} flex flex-col items-center justify-center p-3 m-4 text-center border-2 border-purple-800 rounded w-4/4 sm:w-3/4 md:w-50vw lg:w-40vw  h-3/4 `} key={index}>
                                     <h1 className="text-xl font-bold text-slate-50 lg:text-lg"><strong className="font-light">Title:</strong>{T.title}</h1>
                                     <p className="text-xl font-bold text-slate-50 lg:text-sm"><strong className="font-light">Description:</strong>{T.description}</p>
