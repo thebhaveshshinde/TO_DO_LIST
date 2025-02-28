@@ -29,7 +29,7 @@ function All() {
         localStorage.setItem('completes',JSON.stringify(Completed))
     })
 
-    const filtereddata = inputdata ? Tasks.filter((T) => T.title.toLowerCase().includes(inputdata.toLowerCase())) : Tasks
+    const filtereddata = Tasks.filter((T) => T.title.toLowerCase().includes(inputdata.toLowerCase()))
 
     const HandleDelete = (index) => {
         const tasktodelete = Tasks[index]
